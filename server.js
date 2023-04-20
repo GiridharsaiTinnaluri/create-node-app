@@ -38,8 +38,7 @@ app.set('views', './views');
 //mongo store is used to store the session cookie in the db
 app.use(session({
     name: 'userId',
-    //change the secet to envi
-    secret: 'blahblah',
+    secret: process.env.SESSION_SECRET,
     saveUninitialized: false,
     resave: false,
     cookie:{
