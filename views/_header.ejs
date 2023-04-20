@@ -1,0 +1,30 @@
+
+
+<nav class="bg-black flex shrink justify-center 
+            tems-center p-2 mb-4"
+>
+        <div class="container flex justify-between items-center
+                    text-white"
+        >
+            <a class="" href="/">
+                Authentication
+            </a>
+
+            <% if(locals.user) {%>
+                <div class="flex justify-between space-x-4 text-xs">
+                    <a href="/users/signOut" class="hover:underline">sign out</a>
+                    <a href="/users/resetPassword" class="hover:underline">reset password</a>
+                </div>
+            <% } else {%>
+                <div class="flex justify-between space-x-4 text-xs">
+                    <a href="/users/signIn" class="hover:underline">sign in</a>
+                    <a href="/users/signUp" class="hover:underline">sign up</a>
+                </div>
+            <% }%>
+
+            <!-- <div class="flex justify-between space-x-4 text-xs">
+                <span class="">Total Projects: 20</span>
+                <span class="">Total Issues: 300</span>
+            </div> -->
+        </div>
+</nav>

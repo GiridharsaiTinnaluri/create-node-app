@@ -1,0 +1,55 @@
+
+
+<h1> Sign In </h1>
+<div 
+    class="p-2 mx-auto w-full sm:w-1/2 text-left
+            "
+> 
+    <form
+        id="signUpForm"
+        method="POST"
+        action="/users/createSession"
+        class="space-y-2"
+    >
+
+        <div 
+            class="flex flex-col text-[0.7rem] space-y-[2px] capitalize"
+        >
+            <label for="email">email:</label>
+            <input 
+                id="email"
+                name="email"
+                type="email" 
+                required
+                placeholder="Enter email"
+                class="border-2 border-blue-500/50 outline-none p-1 rounded-md"
+            />
+        </div>
+
+        <div 
+            class="flex flex-col text-[0.7rem] space-y-[2px] capitalize"
+        >
+            <label for="password">password :</label>
+            <input 
+                id="password"
+                name="password"
+                type="password" 
+                required
+                placeholder="Enter password"
+                class="border-2 border-blue-500/50 outline-none p-1 rounded-md"
+            />
+        </div>
+
+        <button type="submit" class="w-full bg-black text-[0.7rem] text-white rounded-md py-1">
+            Sign In
+        </button>
+
+    </form>
+    <br/>
+    <p>
+        <a href="/users/auth/google" class="hover:underline text-xs">Google SignIn/SignUp</a>
+    </p>
+    <p>
+        <a href="/users/forgotPassword" class="hover:underline text-xs">Forgot password</a>
+    </p>
+</div>

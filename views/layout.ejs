@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Auth</title>
+
+    <!-- tailwind css script -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.js"></script>
+
+    <!-- All style links from partials/subpages goes here -->
+    <link rel="stylesheet" href="http://localhost:5000/css/layout.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/noty/3.1.4/noty.min.css" />
+    <%- style %>
+</head>
+<body 
+    class="m-0 p-0 text-black box-border h-screen"
+>
+    <!-- header partial -->
+    <%- include('_header'); %>
+
+    <div class="w-full text-center">
+        <%- body %>
+    </div>
+
+    <!-- All scripts from subpages/partials tags goes here -->
+    <%- script %>
+    <script>
+        <% if(flash.success && flash.success.length > 0) { %>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.success %>",
+                type: 'success',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+        <% } %>
+
+        <% if(flash.error && flash.error.length > 0) { %>
+            new Noty({
+                theme: 'relax',
+                text: "<%= flash.error %>",
+                type: 'error',
+                layout: 'topRight',
+                timeout: 1500
+            }).show();
+        <% } %>
+    </script>
+</body>
+</html>
