@@ -184,6 +184,9 @@ try{
 // private route
 // gets the user data to reset password
 module.exports.forgotPassword = async(req, res) => {
+    if(req.isAuthenticated()) {
+        return res.redirect('/users/profile');
+     }
     res.render('forgotPassword');
 }
 

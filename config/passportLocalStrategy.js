@@ -10,7 +10,7 @@ passport.use(new LocalStrategy({
     },
     async function(req, email, password, done) {
         //find a user and establish the identity
-      try {  
+      try { 
             const user = await USER.findOne({ email: email });
             if(!user|| user.length < 1) {
                 req.flash('error', 'Invalid Username/Password');
