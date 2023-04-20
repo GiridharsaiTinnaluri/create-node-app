@@ -9,6 +9,7 @@ const passportLocal = require('./config/passportLocalStrategy');
 const passportGoogle = require('./config/passportGoogleOauth');
 const MongoStore = require('connect-mongo'); 
 const flash = require('connect-flash');
+const path = require('path');
 
 //importing all required modules
 const MDBConnection = require('./config/dbConnection');
@@ -32,7 +33,7 @@ app.set('layout extractScripts', true);
 
 // setting view templates - ejs.
 app.set('view engine', 'ejs');
-app.set('views', './views');
+app.set('views', path.join(__dirname, 'views'));
 
 //mongo store is used to store the session cookie in the db
 app.use(session({
