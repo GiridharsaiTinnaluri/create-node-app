@@ -226,7 +226,7 @@ module.exports.sendForgotPasswordLinkToUserMail = async (req, res) => {
                 expiresIn: '15m'
             });
             // reset link with 15 mins expiry
-            const link = `http://localhost:5000/users/resetForgotPassword/${user.id}/${token}`
+            const link = `${process.env.LOCALHOST}/users/resetForgotPassword/${user.id}/${token}`
 
             //send link to user mail
             passwordMailer.forgotPassword(user.email, link);
