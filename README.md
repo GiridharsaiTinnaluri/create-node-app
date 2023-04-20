@@ -23,7 +23,6 @@ To use this starter code, you need to follow these steps:
 3. Create a `.env` file and add your environment variables such as database URL, email credentials, Google client ID and secret, etc.
 4. Run the server: `npm start` or `npm run dev` for development mode
 5. Open your browser and go to `http://localhost:3000` or your custom port
-6. Enjoy building your awesome application with Node.js authentication! 😎
 
 # Environmental variables
 The code is easy to use and customize. To run the code, you need to have node and mongodb installed on your machine. You also need to create a .env file in the root directory and add your own values for the following variables:
@@ -60,3 +59,7 @@ The server will run on http://localhost:5000 by default. You can then access the
 
 You can modify or extend this starter code according to your needs and preferences. Happy coding!
 ```
+
+Enjoy building your awesome application with Node.js authentication! 😎
+
+
